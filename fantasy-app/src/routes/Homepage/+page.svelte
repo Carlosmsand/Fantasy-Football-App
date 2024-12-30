@@ -1,9 +1,9 @@
 <div class="header_container">
-<h1>Fantasy Football</h1>
+<h1>Homepage</h1>
 </div>
 <div class="login_box">
 <h3>Login</h3>    
-<form action="/login" method="POST">
+<form on:submit={handleSubmit} action="/login" method="POST">
     <div class="form-group">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required />
@@ -12,7 +12,7 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required />
     </div>  
-    <button on:click={handleSubmit} type="submit">Login</button>
+    <button type="submit">Login</button>
 </form>
 </div>
 <style>
@@ -52,7 +52,6 @@ form {
 import { goto } from '$app/navigation';
 
 function handleSubmit() {
-    console.log("Form Submitted!");
   goto('/Homepage'); 
 }
 </script>
